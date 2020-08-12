@@ -8,7 +8,28 @@ namespace PdfMaker.Models
 {
     public class ImageFile : NotifyModel
     {
-        public string Name { get; set; }
-        public string Data { get; set; }
+        private string _name;
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                _name = value;
+                OnPropertyChanged("Name");
+            }
+
+        }
+
+        private string _data;
+        public string Data
+        {
+            get { return _data; }
+            set
+            {
+                _name = value;
+                OnPropertyChanged("Data");
+            }
+
+        }
     }
 }
