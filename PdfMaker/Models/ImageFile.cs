@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PdfMaker.Models
 {
-    public class ImageFile
+    public class ImageFile : NotifyModel
     {
         public string Name { get; set; }
         public string Data { get; set; }
