@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PdfMaker.Models
 {
-    public class NotifyModel : System.ComponentModel.INotifyPropertyChanged 
+    public abstract class NotifyModel : System.ComponentModel.INotifyPropertyChanged 
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
