@@ -7,6 +7,7 @@ namespace PdfMaker
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new ViewModels.MainWindowViewModel();
         }
 
         private void ButtonImportFiles_Click(object sender, RoutedEventArgs e)
