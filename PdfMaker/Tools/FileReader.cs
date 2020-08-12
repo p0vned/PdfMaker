@@ -2,24 +2,30 @@
 {
     class FileReader
     {
-        public string ImportedFile { get; private set; }
+        public System.Collections.Generic.List<string> ImportedFiles { get; private set; }
 
         public bool ImportFile()
         {
             var openFileDialog = new Microsoft.Win32.OpenFileDialog();
             openFileDialog.InitialDirectory = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop);
+            openFileDialog.Multiselect = true;
 
             if (openFileDialog.ShowDialog() == true)
             {
-                var fileStream = openFileDialog.OpenFile();
+                var fileStreams = openFileDialog.OpenFiles();
+                ImportedFiles = new System.Collections.Generic.List<string>();
 
-                using (System.IO.StreamReader reader = new System.IO.StreamReader(fileStream))
+                foreach (var stream in fileStreams)
                 {
-                    ImportedFile = reader.ReadToEnd();
+                    using (System.IO.StreamReader reader = new System.IO.StreamReader(stream))
+                    {
+                        ImportedFiles.Add(reader.ReadToEnd());
+                    }
                 }
 
                 return true;
             }
+
             return false;
         }
     }

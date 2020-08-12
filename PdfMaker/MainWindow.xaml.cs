@@ -11,7 +11,7 @@ namespace PdfMaker
 
         private void ButtonImportFiles_Click(object sender, RoutedEventArgs e)
         {
-            var fileReader = new PdfMaker.Tools.FileReader();
+            var fileReader = new Tools.FileReader();
             var isFileImported = fileReader.ImportFile();
             if (isFileImported == true)
                 MessageBox.Show("File imported properly!");
