@@ -62,6 +62,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Commands\ImportFileCommand.cs" />
     <Compile Include="Models\ImageFile.cs" />
     <Compile Include="Models\NotifyModel.cs" />
     <Compile Include="Tools\FileReader.cs" />
