@@ -20,7 +20,7 @@
             get { return _data; }
             set
             {
-                _name = value;
+                _data = value;
                 OnPropertyChanged("Data");
             }
 
