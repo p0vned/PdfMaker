@@ -19,7 +19,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <GroupBox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Header="Import">
-
+            <Button Name="ButtonImportFiles" Content="Import files" Click="ButtonImportFiles_Click"/>
         </GroupBox>
         <GroupBox Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Header="The list of imported files">
 

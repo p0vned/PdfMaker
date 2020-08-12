@@ -8,5 +8,10 @@ namespace PdfMaker
         {
             InitializeComponent();
         }
+
+        private void ButtonImportFiles_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
