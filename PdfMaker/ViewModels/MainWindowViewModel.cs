@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PdfMaker.ViewModels
+﻿namespace PdfMaker.ViewModels
 {
     class MainWindowViewModel
     {
+        public System.Collections.ObjectModel.ObservableCollection<Models.ImageFile> ListImageFiles { get; set; }
     }
 }
