@@ -1,7 +1,10 @@
-﻿namespace PdfMaker.ViewModels
+﻿using System.Collections.ObjectModel;
+using PdfMaker.Models;
+
+namespace PdfMaker.ViewModels
 {
     class MainWindowViewModel
     {
-        public System.Collections.ObjectModel.ObservableCollection<Models.ImageFile> ListImageFiles { get; set; }
+        public ObservableCollection<ImageFile> ListImageFiles { get; set; }
     }
 }
