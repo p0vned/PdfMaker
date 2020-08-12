@@ -23,7 +23,8 @@
                 _data = value;
                 OnPropertyChanged("Data");
             }
-
         }
+
+
     }
 }
