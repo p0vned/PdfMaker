@@ -1,4 +1,6 @@
-﻿namespace PdfMaker.Models
+﻿using System.IO;
+
+namespace PdfMaker.Models
 {
     public class ImageFile : NotifyModel
     {
@@ -14,14 +16,14 @@
 
         }
 
-        private string _data;
-        public string Data
+        private Stream _stream;
+        public Stream Stream
         {
-            get { return _data; }
+            get { return _stream; }
             set
             {
-                _data = value;
-                OnPropertyChanged("Data");
+                _stream = value;
+                OnPropertyChanged("Stream");
             }
         }
 
