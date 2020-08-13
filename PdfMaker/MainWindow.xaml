@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PdfMaker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="PDF Maker by Wojciech Strzeboński" Height="500" Width="500"
+        ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="300"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Header="Import">
+            <Button Name="ButtonImportFiles" Content="Import files" Command="{Binding ImportFilesCommand}"/>
+        </GroupBox>
+        <GroupBox Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Header="The list of imported files">
+            <ListView ItemsSource="{Binding Path=ListImageFiles}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Label Content="{Binding Name}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+            </ListView>
+        </GroupBox>
+        <GroupBox Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Header="Options">
+            <Button Name="ButtonSaveFilesToPdf" Content="Save imported files to PDF" Command="{Binding SaveFilesPdfCommand}"/>
+        </GroupBox>
     </Grid>
 </Window>
