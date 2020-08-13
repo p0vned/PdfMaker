@@ -14,6 +14,7 @@ namespace PdfMaker.ViewModels
         public MainWindowViewModel()
         {
             ImportFilesCommand = new ImportFileCommand(ImportFiles);
+            ListImageFiles = new ObservableCollection<ImageFile>();
         }
 
         public void ImportFiles()
@@ -33,7 +34,7 @@ namespace PdfMaker.ViewModels
                         var imageFile = new ImageFile();
                         
                         imageFile.Data = reader.ReadToEnd();
-                        imageFile.Name = openFileDialog.SafeFileName + Path.GetExtension(openFileDialog.FileName);
+                        imageFile.Name = openFileDialog.SafeFileName;
 
                         ListImageFiles.Add(imageFile);
                     }
